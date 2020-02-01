@@ -1,0 +1,3 @@
+nest g module cats
+nest g controller cats
+nest g service cats
