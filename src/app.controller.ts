@@ -15,8 +15,11 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+  
+  @Get('/')
+  @Redirect("http://localhost:3000/")
 
-  @Get('docs')
+  @Get('/docs')
   @Redirect('https://docs.nestjs.com', 302)
     getDocs(@Query('version') version) {
     if (version && version === '5') {
