@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { CatsController } from './cats/cats.controller';
 import { CatsService } from './cats/cats.service';
 import { CatsModule } from './cats/cats.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 /** NOTE 
  * Module consists of 
@@ -12,11 +14,8 @@ import { CatsModule } from './cats/cats.module';
  * controllers
  * providers 
  */
-
-
-
 @Module({
-  imports: [CatsModule],
+  imports: [CatsModule, AuthModule, UsersModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -10,11 +10,11 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
   
-  @Get("/Ibrahim")
-  @Redirect('https://github.com/IbrahimShamma99/Nest-Starter', 301)
-  getHello(): string {
-    return this.appService.getHello();
-  }
+  // @Get("/Ibrahim")
+  // @Redirect('https://github.com/IbrahimShamma99/Nest-Starter', 301)
+  // getHello(): string {
+  //   return this.appService.getHello();
+  // }
   
   @Get('/')
   @Redirect("http://localhost:3000/")

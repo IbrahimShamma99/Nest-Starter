@@ -23,5 +23,5 @@ server();
   * Using this lifecycle, you can plan for appropriate 
   * initialization of modules and services, manage active 
   * connections, and gracefully shutdown your application 
-  * when it receives a termination signal.
+  * when it recceives a termination signal.
   */
