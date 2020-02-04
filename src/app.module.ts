@@ -6,6 +6,7 @@ import { CatsService } from './cats/cats.service';
 import { CatsModule } from './cats/cats.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { GraphqlModule } from './graphql/graphql.module';
 
 /** NOTE 
  * Module consists of 
@@ -15,7 +16,7 @@ import { UsersModule } from './users/users.module';
  * providers 
  */
 @Module({
-  imports: [CatsModule, AuthModule, UsersModule],
+  imports: [CatsModule, AuthModule, UsersModule, GraphqlModule],
   controllers: [AppController],
   providers: [AppService],
 })
