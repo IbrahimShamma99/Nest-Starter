@@ -20,8 +20,8 @@ export class AppController {
   @UseGuards(AuthGuard('local'))
   @Post('auth/login')
   async login(@Request() req) {
-    return req.user;}
-
+    return req.user;
+  }
 
   @Get('/NIGGAA')
   @Redirect("https://docs.nestjs.com/v5/")
