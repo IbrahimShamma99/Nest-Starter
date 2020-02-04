@@ -4,23 +4,17 @@
  * and different routes can perform different actions.
  */
 import { Controller, Get, Post , Redirect , Query , Request, UseGuards} from '@nestjs/common';
-import { AppService } from './app.service';
+import { AuthService } from './auth/auth.service';
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly authService: AuthService) {}
   
-  @Get("/Ibrahim")
-  @Redirect('https://github.com/IbrahimShamma99/Nest-Starter', 301)
-  getHello(): string {
-    return this.appService.getHello();
-  }
-
   @UseGuards(AuthGuard('local'))
   @Post('auth/login')
   async login(@Request() req) {
-    return req.user;
+    return this.authService.login(req.user);
   }
 
   @Get('/NIGGAA')
